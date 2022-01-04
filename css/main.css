@@ -1,9 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap");
-:root {
-  --button-color: #007AF3
-;
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -27,7 +22,7 @@ body {
   text-decoration: none;
   font-weight: bold;
   color: black;
-  font-size: 1.2em;
+  font-size: 1.5em;
 }
 
 .navbar nav {
@@ -45,6 +40,15 @@ body {
   cursor: pointer;
 }
 
+.primary-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 a {
   color: #444;
 }
@@ -56,7 +60,7 @@ ul {
 }
 
 section {
-  padding: 5em 2em;
+  padding: 2em 2em;
 }
 
 .hero {
@@ -105,7 +109,11 @@ section {
   font-weight: 600;
 }
 
-.about-section section {
+.about-section .card {
+  color: black;
+  border-style: solid;
+  border-radius: 1rem;
+  max-width: 60%;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -116,16 +124,19 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0;
+  margin: 2em;
   padding: 0;
+  overflow: hidden;
 }
 
-.about-section .content {
-  max-width: 80%;
+.about-section .card .card-content {
+  padding: 1.5rem;
+  background: rgba(0, 0, 0, 0.15);
 }
 
 .about-section h1 {
   font-size: 2em;
+  margin-left: 5rem;
 }
 
 .about-section::before {
