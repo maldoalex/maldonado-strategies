@@ -42,10 +42,10 @@ body {
     }
 }
 
-.primary-nav {
-    display: flex;
-    align-items: center;
-}
+// .primary-nav {
+//     display: flex;
+//     align-items: center;
+// }
 
 a {
     color: #444;
@@ -232,7 +232,7 @@ nav.menu-btn {
 nav {
     position: fixed;
     z-index: 999;
-    width: 66%;
+    width: 33%;
     right: 0;
     top: 0;
     background: #20272E;
@@ -280,6 +280,7 @@ nav {
     .navbar nav {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         background: none;
         position: unset;
         height: auto;
