@@ -266,6 +266,22 @@ nav {
     cursor: pointer;
 }
 
+@media only screen and (max-width: 767px) {
+    .about-section {
+        font-size: .8em;
+        width: 100%;
+
+
+    .card {
+        max-width: 90%;
+    }
+    }
+
+    .attributes-section .container {
+        margin-top: 1em;
+    }
+}
+
 @media only screen and (min-width: 768px) {
 
     .mobile-menu, .mobile-menu-exit {
@@ -306,6 +322,35 @@ nav {
         }
     }
 
+    .hero-img {
+        width: 30%;
+        margin: 1em 5em;
+    }
+
+
+    .about-section h1 {
+        margin-left: 1em;
+        margin-top: 2.5em;
+    }
+
+    .attributes-section .container {
+        margin: 4em 2em;
+        padding: 2em 0;
+    }
+
+    .attributes-section ul {
+        display: flex;
+
+        li {
+            margin: 2em 1em;
+            // padding: .5em;
+            blockquote {
+                padding: 0;
+                margin: 0;
+            }
+        }
+    }
+
 }
 
 @media only screen and (min-width: 1080px) {
@@ -315,7 +360,7 @@ nav {
     }
 
     section {
-        padding: 10em 4em;
+        padding: 8em 2em;
     }
 
     .hero .container {
@@ -324,7 +369,7 @@ nav {
         text-align: left;
 
         .left-col {
-            margin: 3em 3em 0 5em;
+            margin: 0 3em 0 3em;
 
             h1 {
                 font-size: 3em;
@@ -335,32 +380,29 @@ nav {
 
     .hero-img {
         width: 30%;
-        margin-right: 8em;
+        margin: 0 5em;
     }
 
     .hero-cta {
         display: flex;
     }
 
-    .about-section .container {
+    .about-section .card {
         display: flex;
         justify-content: space-between;
         text-align: left;
+    }
 
-        .right-col {
-            margin: 3em 3em 0 5em;
-
-            p {
-                width: 90%;
-            }
-        }
+    .about-section h1 {
+        margin-left: 1em;
+        margin-top: 2.5em;
     }
 
     .attributes-section ul {
         display: flex;
 
         li {
-            margin: 0 1em;
+            margin: 1em 1em;
         }
     }
 

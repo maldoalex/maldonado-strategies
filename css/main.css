@@ -239,6 +239,19 @@ nav li a:hover {
   cursor: pointer;
 }
 
+@media only screen and (max-width: 767px) {
+  .about-section {
+    font-size: .8em;
+    width: 100%;
+  }
+  .about-section .card {
+    max-width: 90%;
+  }
+  .attributes-section .container {
+    margin-top: 1em;
+  }
+}
+
 @media only screen and (min-width: 768px) {
   .mobile-menu, .mobile-menu-exit {
     display: none;
@@ -281,6 +294,30 @@ nav li a:hover {
   .navbar nav li.current a {
     font-weight: bold;
   }
+  .hero-img {
+    width: 30%;
+    margin: 1em 5em;
+  }
+  .about-section h1 {
+    margin-left: 1em;
+    margin-top: 2.5em;
+  }
+  .attributes-section .container {
+    margin: 4em 2em;
+    padding: 2em 0;
+  }
+  .attributes-section ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .attributes-section ul li {
+    margin: 2em 1em;
+  }
+  .attributes-section ul li blockquote {
+    padding: 0;
+    margin: 0;
+  }
 }
 
 @media only screen and (min-width: 1080px) {
@@ -289,7 +326,7 @@ nav li a:hover {
     margin: 0 auto;
   }
   section {
-    padding: 10em 4em;
+    padding: 8em 2em;
   }
   .hero .container {
     display: -webkit-box;
@@ -301,7 +338,7 @@ nav li a:hover {
     text-align: left;
   }
   .hero .container .left-col {
-    margin: 3em 3em 0 5em;
+    margin: 0 3em 0 3em;
   }
   .hero .container .left-col h1 {
     font-size: 3em;
@@ -309,14 +346,14 @@ nav li a:hover {
   }
   .hero-img {
     width: 30%;
-    margin-right: 8em;
+    margin: 0 5em;
   }
   .hero-cta {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  .about-section .container {
+  .about-section .card {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -325,11 +362,9 @@ nav li a:hover {
             justify-content: space-between;
     text-align: left;
   }
-  .about-section .container .right-col {
-    margin: 3em 3em 0 5em;
-  }
-  .about-section .container .right-col p {
-    width: 90%;
+  .about-section h1 {
+    margin-left: 1em;
+    margin-top: 2.5em;
   }
   .attributes-section ul {
     display: -webkit-box;
@@ -337,7 +372,7 @@ nav li a:hover {
     display: flex;
   }
   .attributes-section ul li {
-    margin: 0 1em;
+    margin: 1em 1em;
   }
   .contact-section {
     position: relative;
