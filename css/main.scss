@@ -15,10 +15,10 @@ body {
 }
 
 .navbar {
-    position: sticky;
-    top: 0;
     background: #6cc6bd;
     padding: 1em;
+    position: sticky;
+    top: 0;
     z-index: 2;
 
     .brand {
@@ -42,11 +42,6 @@ body {
     }
 }
 
-// .primary-nav {
-//     display: flex;
-//     align-items: center;
-// }
-
 a {
     color: #444;
 }
@@ -58,7 +53,7 @@ ul {
 }
 
 section {
-    padding: 2em 2em;
+    padding: 4em 2em;
 }
 
 .hero {
@@ -86,13 +81,19 @@ section {
         margin-top: 0em;
     }
 
-    .watch-video-cta {
-        display: block;
-        margin-top: 1em;
+    // .watch-video-cta {
+    //     display: block;
+    //     margin-top: 1em;
 
-        img {
-            margin-right: .5em;
-        }
+    //     img {
+    //         margin-right: .5em;
+    //     }
+    // }
+
+    .slogan {
+        margin-top: 4em;
+        font-size: 1.2em;
+        color: gray;
     }
 }
 
@@ -102,128 +103,135 @@ section {
     border-radius: 15px;
 }
 
-.about-section {
+section.about-section {
+
     position: relative;
     color: black;
     padding: 10px;
     font-weight: 600;
-    // display: inline-block;
-    // justify-content: center;
-    // align-content: center;
-    
 
-    .card {
-        color: black;
-        border-style: solid;
-        border-radius: 1rem;
-        max-width: 60%;
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 2em;
-        padding: 0;
-        overflow: hidden;
-
-        .card-content {
-            padding: 1.5rem;
-            background: rgba(0, 0, 0, 0.15);
-        }
-
-        // .card-title {
-        //     position: relative;
-        //     width: max-content;
-        // }
-
-        // .card-title::after {
-        //     content: "";
-        //     position: absolute;
-        //     height: 4px;
-        //     left: 0;
-        //     bottom: 0;
-        //     width: 100%;
-
-        // }
-    }
-        
-    h1{
+    h1 {
         font-size: 2em;
         margin-left: 5rem;
+        text-decoration: underline;
     }
-}
-.about-section::before {
-    content: "";
-    position: absolute;
-    background-image: url('../images/austintx.jpg');
-    background-size: cover;
-    opacity: .25;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: -1;
-}
 
-   
+    .card-title {
+        text-decoration: underline;
+        margin-left: 5rem;
+    }
 
-.attributes-section {
+    ul.about-list {
+        margin: 0;
+        padding-left: .1em;
+
+        li {
+            font-size: 1.1em;
+            margin-bottom: 1em;
+            margin-left: 5em;
+            position: relative;
+
+            &:before {
+                content: '';
+                left: -2em;
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                background-image: url('../images/icons8-check-circle.svg');
+                background-size: contain;
+                margin-right: .5em;
+            }
+        }
+    }
+}    
+
+
+section.attributes-section {
+    
     background: #d8fffb;
-    color: black;
-
 
     li {
-        background: #F7F7FF;
+        background: #f7f7ff;
         text-align: center;
         padding: 2em 1em;
         width: 80%;
-        margin: 0 auto 0 auto;
+        margin: 0 auto 5em auto;
         border-radius: 1em;
-    
+
         img {
-            width: 8em;
-            height: 8em;
-            border: 5px solid #F7F7FF;
+            width: 5em;
+            height: 5em;
+            object-fit: cover;
+            border: black;
             border-radius: 50%;
             margin-top: -4.5em;
-            object-fit: cover;
         }
     }
-
 }
 
-h2 {
-    font-size: 2em;
+section.testimonials-section {
+    background: #57E2C6;
+
+    li {
+        background: #f7f7ff;
+        text-align: center;
+        padding: 2em 1em;
+        width: 80%;
+        margin: 0 auto 5em auto;
+        border-radius: 1em;
+
+        img {
+            width: 5em;
+            height: 5em;
+            object-fit: cover;
+            border: black;
+            border-radius: 50%;
+            margin-top: -4.5em;
+        }
+    }
 }
 
-label {
-    display: block;
-    font-size: 1.2em;
-    margin-bottom: .5em;
+section.contact-section {
+
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url(../images/austintx.jpg);
+    background-size: cover;
+    color: white;
+
+    h2 {
+        font-size: 2em;
+    }
+
+    label {
+        display: block;
+        font-size: 1.2em;
+        margin-bottom: .5em;
+    }
+
+    input, textarea {
+        width: 100%;
+        padding: .8em;
+        margin-bottom: 1em;
+        border-radius: .3em;
+        border: 1px solid gray;
+        box-sizing: border-box;
+    }
+
+    .send-message-cta {
+        background-color: #b1fff8;
+        color: black;
+        font-weight: bold;
+        font-size: 1.1em;
+        border: none;
+        display: inline-block;
+        margin-bottom: 5em;
+        border-radius: 5em;
+        padding: .5em 1em;
+        width: unset;
+        cursor: pointer;
+    }
 }
 
-input, textarea {
-    width: 100%;
-    padding: .8em;
-    margin-bottom: 1em;
-    border-radius: .3em;
-    border: 1px solid gray;
-    box-sizing: border-box;
-}
-
-.send-message-cta {
-    background-color: #b1fff8;
-    color: black;
-    font-weight: bold;
-    font-size: 1.3em;
-    border: none;
-    margin-bottom: 5em;
-    border-radius: 5em;
-    padding: .8em 2em;
-    width: unset;
-    cursor: pointer;
-}
-
+// MOBILE NAV
 
 nav.menu-btn {
     display: block;
@@ -231,31 +239,30 @@ nav.menu-btn {
 
 nav {
     position: fixed;
-    z-index: 999;
-    width: 33%;
+    z-index: 3;
+    width: 50%;
     right: 0;
     top: 0;
-    background: #20272E;
+    background: #6cc6bd;
     height: 100vh;
     padding: 1em;
+}
 
-    ul.primary-nav {
-        margin-top: 5em;
-    }
+ul.primary-nav {
+    margin-top: 5em;
+}
 
-    li {
+li {
+    a {
+        color: white;
+        text-decoration: none;
+        display: block;
+        padding: .5em;
+        font-size: 1.3em;
+        text-align: right;
 
-        a {
-            color: white;
-            text-decoration: none;
-            display: block;
-            padding: .5em;
-            font-size: 1.3em;
-            text-align: right;
-
-            &:hover {
-                font-weight: bold;
-            }
+        &:hover {
+            font-weight: bold;
         }
     }
 }
@@ -266,25 +273,8 @@ nav {
     cursor: pointer;
 }
 
-@media only screen and (max-width: 767px) {
-    .about-section {
-        font-size: .8em;
-        width: 100%;
 
-
-    .card {
-        max-width: 90%;
-    }
-    }
-
-    .attributes-section .container {
-        margin-top: 1em;
-    }
-
-    .attributes-section li {
-        margin-top: 60px;
-    }
-}
+// tablet
 
 @media only screen and (min-width: 768px) {
 
@@ -300,7 +290,6 @@ nav {
     .navbar nav {
         display: flex;
         justify-content: space-between;
-        align-items: center;
         background: none;
         position: unset;
         height: auto;
@@ -309,6 +298,10 @@ nav {
 
         ul {
             display: flex;
+        }
+
+        li {
+            padding: .2em;
         }
 
         a {
@@ -320,51 +313,26 @@ nav {
         ul.primary-nav {
             margin: 0;
         }
-
-        li.current a {
-            font-weight: bold;
-        }
     }
 
     .hero-img {
-        width: 30%;
-        margin: 1em 5em;
-    }
-
-
-    .about-section h1 {
-        margin-left: 1em;
-        margin-top: 2.5em;
-    }
-
-    .attributes-section .container {
-        margin: 2em 2em;
-        padding: 2em 0;
-    }
-
-    .attributes-section ul {
-        display: flex;
-
-        li {
-            margin: 1em 1em;
-            // padding: .5em;
-            blockquote {
-                padding: 0;
-                margin: 0;
-            }
-        }
-    }
-
+    width: 50%;
+    margin-top: 3em;
+    border-radius: 15px;
+}
 }
 
+// Laptop
+
 @media only screen and (min-width: 1080px) {
+
     .container {
         width: 1080px;
         margin: 0 auto;
     }
 
     section {
-        padding: 8em 2em;
+        padding: 10em 4em;
     }
 
     .hero .container {
@@ -373,7 +341,7 @@ nav {
         text-align: left;
 
         .left-col {
-            margin: 0 3em 0 3em;
+            margin: 3em 3em 0 5em;
 
             h1 {
                 font-size: 3em;
@@ -384,36 +352,28 @@ nav {
 
     .hero-img {
         width: 30%;
-        margin: 0 5em;
+        margin-right: 8em;
     }
 
-    .hero-cta {
-        display: flex;
-    }
-
-    .about-section .card {
-        display: flex;
-        justify-content: space-between;
-        text-align: left;
-    }
-
-    .about-section h1 {
-        margin-left: 1em;
-        margin-top: 2.5em;
-    }
-
-    // .attributes-section .container {
-    //     margin: 1em 1em;
-    //     padding: 1em 1em;
-    // }
-
-    .attributes-section ul {
-        display: flex;
-justify-content: center;
-align-items: center;
+    ul.about-list {
+        display: block;
+        margin-left: 5em;
 
         li {
-            margin: 1em 1em;
+            font-size: 1.4em;
+
+            &:before {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+
+    .testimonials-section ul {
+        display: flex;
+
+        li {
+            margin: 0 1em;
         }
     }
 

@@ -10,11 +10,11 @@ body {
 }
 
 .navbar {
+  background: #6cc6bd;
+  padding: 1em;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  background: #6cc6bd;
-  padding: 1em;
   z-index: 2;
 }
 
@@ -51,7 +51,7 @@ ul {
 }
 
 section {
-  padding: 2em 2em;
+  padding: 4em 2em;
 }
 
 .hero {
@@ -78,13 +78,10 @@ section {
   margin-top: 0em;
 }
 
-.left-col .watch-video-cta {
-  display: block;
-  margin-top: 1em;
-}
-
-.left-col .watch-video-cta img {
-  margin-right: .5em;
+.left-col .slogan {
+  margin-top: 4em;
+  font-size: 1.2em;
+  color: gray;
 }
 
 .hero-img {
@@ -93,92 +90,111 @@ section {
   border-radius: 15px;
 }
 
-.about-section {
+section.about-section {
   position: relative;
   color: black;
   padding: 10px;
   font-weight: 600;
 }
 
-.about-section .card {
-  color: black;
-  border-style: solid;
-  border-radius: 1rem;
-  max-width: 60%;
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 2em;
-  padding: 0;
-  overflow: hidden;
-}
-
-.about-section .card .card-content {
-  padding: 1.5rem;
-  background: rgba(0, 0, 0, 0.15);
-}
-
-.about-section h1 {
+section.about-section h1 {
   font-size: 2em;
+  margin-left: 5rem;
+  text-decoration: underline;
+}
+
+section.about-section .card-title {
+  text-decoration: underline;
   margin-left: 5rem;
 }
 
-.about-section::before {
-  content: "";
-  position: absolute;
-  background-image: url("../images/austintx.jpg");
-  background-size: cover;
-  opacity: .25;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: -1;
+section.about-section ul.about-list {
+  margin: 0;
+  padding-left: .1em;
 }
 
-.attributes-section {
+section.about-section ul.about-list li {
+  font-size: 1.1em;
+  margin-bottom: 1em;
+  margin-left: 5em;
+  position: relative;
+}
+
+section.about-section ul.about-list li:before {
+  content: '';
+  left: -2em;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-image: url("../images/icons8-check-circle.svg");
+  background-size: contain;
+  margin-right: .5em;
+}
+
+section.attributes-section {
   background: #d8fffb;
-  color: black;
 }
 
-.attributes-section li {
-  background: #F7F7FF;
+section.attributes-section li {
+  background: #f7f7ff;
   text-align: center;
   padding: 2em 1em;
   width: 80%;
-  margin: 0 auto 0 auto;
+  margin: 0 auto 5em auto;
   border-radius: 1em;
 }
 
-.attributes-section li img {
-  width: 8em;
-  height: 8em;
-  border: 5px solid #F7F7FF;
-  border-radius: 50%;
-  margin-top: -4.5em;
+section.attributes-section li img {
+  width: 5em;
+  height: 5em;
   -o-object-fit: cover;
      object-fit: cover;
+  border: black;
+  border-radius: 50%;
+  margin-top: -4.5em;
 }
 
-h2 {
+section.testimonials-section {
+  background: #57E2C6;
+}
+
+section.testimonials-section li {
+  background: #f7f7ff;
+  text-align: center;
+  padding: 2em 1em;
+  width: 80%;
+  margin: 0 auto 5em auto;
+  border-radius: 1em;
+}
+
+section.testimonials-section li img {
+  width: 5em;
+  height: 5em;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: black;
+  border-radius: 50%;
+  margin-top: -4.5em;
+}
+
+section.contact-section {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.3))), url(../images/austintx.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)), url(../images/austintx.jpg);
+  background-size: cover;
+  color: white;
+}
+
+section.contact-section h2 {
   font-size: 2em;
 }
 
-label {
+section.contact-section label {
   display: block;
   font-size: 1.2em;
   margin-bottom: .5em;
 }
 
-input, textarea {
+section.contact-section input, section.contact-section textarea {
   width: 100%;
   padding: .8em;
   margin-bottom: 1em;
@@ -188,15 +204,16 @@ input, textarea {
           box-sizing: border-box;
 }
 
-.send-message-cta {
+section.contact-section .send-message-cta {
   background-color: #b1fff8;
   color: black;
   font-weight: bold;
-  font-size: 1.3em;
+  font-size: 1.1em;
   border: none;
+  display: inline-block;
   margin-bottom: 5em;
   border-radius: 5em;
-  padding: .8em 2em;
+  padding: .5em 1em;
   width: unset;
   cursor: pointer;
 }
@@ -207,20 +224,20 @@ nav.menu-btn {
 
 nav {
   position: fixed;
-  z-index: 999;
-  width: 33%;
+  z-index: 3;
+  width: 50%;
   right: 0;
   top: 0;
-  background: #20272E;
+  background: #6cc6bd;
   height: 100vh;
   padding: 1em;
 }
 
-nav ul.primary-nav {
+ul.primary-nav {
   margin-top: 5em;
 }
 
-nav li a {
+li a {
   color: white;
   text-decoration: none;
   display: block;
@@ -229,7 +246,7 @@ nav li a {
   text-align: right;
 }
 
-nav li a:hover {
+li a:hover {
   font-weight: bold;
 }
 
@@ -237,22 +254,6 @@ nav li a:hover {
   float: right;
   margin: .5em;
   cursor: pointer;
-}
-
-@media only screen and (max-width: 767px) {
-  .about-section {
-    font-size: .8em;
-    width: 100%;
-  }
-  .about-section .card {
-    max-width: 90%;
-  }
-  .attributes-section .container {
-    margin-top: 1em;
-  }
-  .attributes-section li {
-    margin-top: 60px;
-  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -272,9 +273,6 @@ nav li a:hover {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     background: none;
     position: unset;
     height: auto;
@@ -286,6 +284,9 @@ nav li a:hover {
     display: -ms-flexbox;
     display: flex;
   }
+  .navbar nav li {
+    padding: .2em;
+  }
   .navbar nav a {
     color: black;
     font-size: 1em;
@@ -294,32 +295,10 @@ nav li a:hover {
   .navbar nav ul.primary-nav {
     margin: 0;
   }
-  .navbar nav li.current a {
-    font-weight: bold;
-  }
   .hero-img {
-    width: 30%;
-    margin: 1em 5em;
-  }
-  .about-section h1 {
-    margin-left: 1em;
-    margin-top: 2.5em;
-  }
-  .attributes-section .container {
-    margin: 2em 2em;
-    padding: 2em 0;
-  }
-  .attributes-section ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .attributes-section ul li {
-    margin: 1em 1em;
-  }
-  .attributes-section ul li blockquote {
-    padding: 0;
-    margin: 0;
+    width: 50%;
+    margin-top: 3em;
+    border-radius: 15px;
   }
 }
 
@@ -329,7 +308,7 @@ nav li a:hover {
     margin: 0 auto;
   }
   section {
-    padding: 8em 2em;
+    padding: 10em 4em;
   }
   .hero .container {
     display: -webkit-box;
@@ -341,7 +320,7 @@ nav li a:hover {
     text-align: left;
   }
   .hero .container .left-col {
-    margin: 0 3em 0 3em;
+    margin: 3em 3em 0 5em;
   }
   .hero .container .left-col h1 {
     font-size: 3em;
@@ -349,39 +328,26 @@ nav li a:hover {
   }
   .hero-img {
     width: 30%;
-    margin: 0 5em;
+    margin-right: 8em;
   }
-  .hero-cta {
+  ul.about-list {
+    display: block;
+    margin-left: 5em;
+  }
+  ul.about-list li {
+    font-size: 1.4em;
+  }
+  ul.about-list li:before {
+    width: 30px;
+    height: 30px;
+  }
+  .testimonials-section ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  .about-section .card {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    text-align: left;
-  }
-  .about-section h1 {
-    margin-left: 1em;
-    margin-top: 2.5em;
-  }
-  .attributes-section ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .attributes-section ul li {
-    margin: 1em 1em;
+  .testimonials-section ul li {
+    margin: 0 1em;
   }
   .contact-section {
     position: relative;
