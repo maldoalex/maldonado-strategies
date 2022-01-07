@@ -231,6 +231,35 @@ section.contact-section {
     }
 }
 
+footer {
+    background: #333;
+    padding: 1em;
+    margin-top: auto;
+    height: 2em;
+    display: flex;
+    place-content: end center;
+
+    p {
+        // justify-content: center;
+        // align-items: center;
+        // align-content: center;
+        margin: 0;
+        padding-left: 20px;
+        color: white;
+        font-size: .9em;
+        // padding-top: 3px;
+        // padding-left: 9px;
+    }
+
+    // .logo {
+    //     text-decoration: none;
+    //     font-weight: bold;
+    //     color: black;
+    //     font-size: 1.5em;
+    // }
+
+}
+
 // MOBILE NAV
 
 nav.menu-btn {

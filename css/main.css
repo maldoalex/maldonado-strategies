@@ -218,6 +218,24 @@ section.contact-section .send-message-cta {
   cursor: pointer;
 }
 
+footer {
+  background: #333;
+  padding: 1em;
+  margin-top: auto;
+  height: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  place-content: end center;
+}
+
+footer p {
+  margin: 0;
+  padding-left: 20px;
+  color: white;
+  font-size: .9em;
+}
+
 nav.menu-btn {
   display: block;
 }
