@@ -121,6 +121,11 @@ section.about-section {
         margin-left: 5rem;
     }
 
+    .about-text {
+        margin: 0;
+        padding-left: 5em;
+    }
+
     ul.about-list {
         margin: 0;
         padding-left: .1em;
@@ -130,17 +135,18 @@ section.about-section {
             margin-bottom: 1em;
             margin-left: 5em;
             position: relative;
+            list-style-type: disc;
 
-            &:before {
-                content: '';
-                left: -2em;
-                position: absolute;
-                width: 20px;
-                height: 20px;
-                background-image: url('../images/icons8-check-circle.svg');
-                background-size: contain;
-                margin-right: .5em;
-            }
+            // &:before {
+            //     content: '';
+            //     left: -2em;
+            //     position: absolute;
+            //     width: 20px;
+            //     height: 20px;
+            //     background-image: url('../images/icons8-check-circle.svg');
+            //     background-size: contain;
+            //     margin-right: .5em;
+            // }
         }
     }
 }    
@@ -232,7 +238,7 @@ section.contact-section {
 }
 
 footer {
-    background: #333;
+    background: black;
     padding: 1em;
     margin-top: auto;
     height: 2em;
@@ -391,10 +397,10 @@ li {
         li {
             font-size: 1.4em;
 
-            &:before {
-                width: 30px;
-                height: 30px;
-            }
+            // &:before {
+            //     width: 30px;
+            //     height: 30px;
+            // }
         }
     }
 
