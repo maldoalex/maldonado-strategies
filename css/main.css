@@ -163,10 +163,12 @@ section.testimonials-section li {
 }
 
 section.testimonials-section li img {
-  width: 5em;
-  height: 5em;
-  -o-object-fit: cover;
-     object-fit: cover;
+  width: 6em;
+  height: 6em;
+  -o-object-fit: fill;
+     object-fit: fill;
+  -o-object-position: center;
+     object-position: center;
   border: black;
   border-radius: 50%;
   margin-top: -4.5em;
@@ -356,7 +358,7 @@ li a:hover {
     display: flex;
   }
   .testimonials-section ul li {
-    margin: 0 1em;
+    margin: 3em 1em;
   }
   .contact-section {
     position: relative;
