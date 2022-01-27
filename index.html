@@ -182,7 +182,7 @@
             <div class="contact-left">
                 <h2>Contact</h2>
 
-                <form action="https://formsubmit.co/dm@dianamaldonado.com" method="POST">
+                <form id="contact-form" action="https://formsubmit.co/dm@dianamaldonado.com" method="POST">
                     <label for="name">Name</label>
                     <input type="text" id="name" name="name">
                     <label for="email">Email</label>
@@ -190,10 +190,10 @@
 
                     <label for="message">Message</label>
                     <textarea name="message" id="message" cols="30" rows="10"></textarea>
-
-                    <input type="submit" class="send-message-cta" value="Send Message">
+                    
+                    <input id="btn-submit" type="submit" class="send-message-cta" value="Send Message">
                     <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_next" value="https://maldonadostrategies.com/index.html">
+                    <!-- <input type="hidden" name="_next" value="https://maldonadostrategies.com/index.html"> -->
                 </form>
             </div>
         </div>
@@ -224,6 +224,34 @@
         mobileBtnExit.addEventListener('click', () => {
             nav.classList.remove('menu-btn');
         })
+
+        // let form = document.getElementById('contact-form');
+        //     form.addEventListener("submit", (e) => {
+        //         e.preventDefault();
+        //         alert("Thank you! Your message was sent!");
+        //         form.value = '';
+        //     });
+
+        const btn = document.getElementById('btn-submit');
+
+            btn.addEventListener('click', function handleClick(event) {
+                // 👇️ if you are submitting a form (prevents page reload)
+                event.preventDefault();
+
+                alert("Thank you! Your message was sent!");
+
+                const nameInput = document.getElementById('name');
+                const emailInput = document.getElementById('email');
+                const messageInput = document.getElementById('message');
+
+                // Send value to server
+                // console.log(firstNameInput.value);
+
+                // 👇️ clear input field
+                nameInput.value = '';
+                emailInput.value = '';
+                messageInput.value = '';
+            });
 
     </script>
 
