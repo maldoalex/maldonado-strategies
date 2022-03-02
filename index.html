@@ -193,12 +193,12 @@
                     
                     <input id="btn-submit" type="submit" class="send-message-cta" value="Send Message">
                     <input type="hidden" name="_captcha" value="false">
-                    <!-- <input type="hidden" name="_next" value="https://maldonadostrategies.com/index.html"> -->
                 </form>
             </div>
         </div>
     </section>
 
+                    <!-- <input type="hidden" name="_next" value="https://maldonadostrategies.com/index.html"> -->
     <!-- FOOTER************************************* -->
     <footer>
         <!-- <div class="container"> -->
@@ -235,7 +235,7 @@
         const btn = document.getElementById('btn-submit');
 
             btn.addEventListener('click', function handleClick(event) {
-                // 👇️ if you are submitting a form (prevents page reload)
+                
                 event.preventDefault();
 
                 alert("Thank you! Your message was sent!");
@@ -244,10 +244,6 @@
                 const emailInput = document.getElementById('email');
                 const messageInput = document.getElementById('message');
 
-                // Send value to server
-                // console.log(firstNameInput.value);
-
-                // 👇️ clear input field
                 nameInput.value = '';
                 emailInput.value = '';
                 messageInput.value = '';
